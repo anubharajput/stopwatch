@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="stop-watch">STOPWATCH</h2>
+        <h2>VANILA JAVASCRIPT STOPWATCH</h2>
+        <h1 class="output">
+            <span id="dy">00</span>
+            <span>:</span>
+            <span  id="hr">00 </span>
+            <span >:</span>
+            <span  id="min">00</span>
+            <span class="txt">:</span>
+            <span  id="sec"> 00</span>
+            <span >:</span>
+            <span  id="count"> 00</span>
+        </h1>
+        <div class="icons">
+            <div class="btn" id="reset-btn">
+                <p><i class="fa-solid fa-rotate-right"></i></p>
+            </div>
+            <div class="btn" id="start-btn">
+                <p><i class="fa-solid fa-play"></i></p>
+            </div>
+            <div class="btn" id="stop-btn">
+                <p><i class="fa-solid fa-pause"></i></p>
+            </div>
+            <div class="btn" id="lap-btn">
+                <p><i class="fa-solid fa-stopwatch"></i></p>
+            </div>
+        </div>
+        <div class="lap-content-container disable">
+            <div class="lap-heading-container disable">
+                <h3 class="heading disable">Lap Number</h3>
+                <h3 class="heading disable">Lap Time</h3>
+                <h3 class="heading disable">Total Lap Time</h3>
+            </div>
+            <div class="lap-container"></div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/5a487294c4.js" crossorigin="anonymous"></script>
+</body>
+<script src="script.js"></script>
+
+</html>
