@@ -14,17 +14,19 @@ body {
   justify-content: center;
   background-color: rgb(83, 77, 77);
 }
-.output{
-  border:3px solid rgb(250, 131, 151);
+
+.output {
+  border: 3px solid rgb(250, 131, 151);
   padding: 50px;
   border-radius: 50px;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin:5rem 0;
+  margin: 5rem 0;
 }
 
 .container .container2 {
@@ -90,28 +92,39 @@ body {
   font-weight: 600;
   font-size: 1.8rem;
 }
-.icons #start-btn,.icons #stop-btn , .icons #reset-btn, .icons #lap-btn{
+
+.icons #start-btn,
+.icons #stop-btn,
+.icons #reset-btn,
+.icons #lap-btn {
   background-color: rgb(244, 60, 91);
 }
-.icons #start-btn i,.icons #stop-btn i, .icons #reset-btn i,.icons #lap-btn i{
-color:black;
-background-color: rgb(244, 60, 91);
+
+.icons #start-btn i,
+.icons #stop-btn i,
+.icons #reset-btn i,
+.icons #lap-btn i {
+  color: black;
+  background-color: rgb(244, 60, 91);
 }
 
-img{
+img {
   width: 200px;
   background-color: rgb(244, 60, 91);
   line-height: 0;
   width: 31px;
 }
-.lap-content-container{
+
+.lap-content-container {
   border-radius: 10px;
   background-color: rgb(250, 131, 151);
   padding: 15px;
 }
-.container .icons .btn:hover{
+
+.container .icons .btn:hover {
   box-shadow: 5px 5px 5px rgb(95, 55, 62);
 }
+
 @media screen and (min-width:320px) {
 
   .container .icons .btn {
@@ -121,34 +134,42 @@ img{
   .container .icons {
     gap: 9px;
   }
-  .ouput{
-    font-size:25px;
+
+  .ouput {
+    font-size: 25px;
   }
-  .container .lap-content-container{
+
+  .container .lap-content-container {
     display: none;
     flex-direction: column;
-    gap:15px;
-    width:95%;
-    margin:auto;
+    gap: 15px;
+    width: 95%;
+    margin: auto;
   }
+
   .container .lap-heading-container {
     font-size: 11px;
   }
+
   .container .lap-container .lap {
     font-size: 15px;
+  }
+
+  .output {
+    font-size: 23px;
+  }
 }
-.output{
-  font-size:23px;
-}
-}
-@media screen  and (min-width:425px){
+
+@media screen and (min-width:425px) {
   .container .lap-heading-container {
     font-size: 14px;
   }
+
   .container .lap-container .lap {
     font-size: 19px;
+  }
 }
-}
+
 @media screen and (min-width:768px) {
   .container .icons .btn {
     padding: 11px 41px;
@@ -157,18 +178,20 @@ img{
   .container .icons {
     gap: 15px;
   }
+
   .container .lap-heading-container {
     font-size: 15px;
   }
+
   .container .lap-container .lap {
     font-size: 20px;
-}
+  }
 }
 
 @media screen and (min-width:2560px) {
   .container .stop-watch {
     font-size: 77px;
-}
+  }
 
   .container h2 {
     font-size: 55px;
@@ -177,33 +200,43 @@ img{
   .output {
     font-size: 44px;
   }
+
   .container .icons .btn {
     font-size: 35px;
     padding: 23px 95px;
-}
-.container .icons {
-  gap: 40px;
-}
-.container .lap-heading-container {
-  font-size: 25px;
-}
-.container .lap-container .lap {
-  font-size: 26px;
-}
-.container{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 4rem;
-margin: 8rem 0;
-}
-.output {
-  font-size:52px;
-  border: 3px solid rgb(250, 131, 151);
-  padding: 83px;
-  border-radius: 79px;
-}
-.icons #start-btn i, .icons #stop-btn i, .icons #reset-btn i, .icons #lap-btn i {
-font-size :3rem;
-}
+  }
+
+  .container .icons {
+    gap: 40px;
+  }
+
+  .container .lap-heading-container {
+    font-size: 25px;
+  }
+
+  .container .lap-container .lap {
+    font-size: 26px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin: 8rem 0;
+  }
+
+  .output {
+    font-size: 52px;
+    border: 3px solid rgb(250, 131, 151);
+    padding: 83px;
+    border-radius: 79px;
+  }
+
+  .icons #start-btn i,
+  .icons #stop-btn i,
+  .icons #reset-btn i,
+  .icons #lap-btn i {
+    font-size: 3rem;
+  }
 }

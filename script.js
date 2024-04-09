@@ -2,7 +2,7 @@ const start = document.getElementById("start-btn");
 const stop = document.getElementById("stop-btn");
 const reset = document.getElementById("reset-btn");
 const lap = document.getElementById("lap-btn");
-const background=document.querySelector(".lap-content-container");
+const lapContainerBG = document.querySelector(".lap-content-container");
 const displayTime = document.querySelector(".output");
 const lapContainer = document.querySelector(".lap-container");
 const lapHeadings = document.querySelectorAll(".heading");
@@ -60,6 +60,7 @@ reset.addEventListener("click", () => {
     reset.style.display = "none";
     lap.style.display = "none";
     lapCounter = 0;
+    lapContainerBG.style.display = "none";
     lapHeadings[0].style.display = "none";
     lapHeadings[1].style.display = "none";
     lapHeadings[2].style.display = "none";
@@ -70,7 +71,7 @@ lap.addEventListener("click", () => {
     lapCounter++;
     let { lapTime, totalLapTime } = getLapTime();
     if (lapCounter > 0) {
-        background.style.display="flex";
+        lapContainerBG.style.display = "flex";
         lapHeadings[0].style.display = "block";
         lapHeadings[1].style.display = "block";
         lapHeadings[2].style.display = "block";
