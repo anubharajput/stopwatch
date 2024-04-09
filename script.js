@@ -6,6 +6,7 @@ const lapContainerBG = document.querySelector(".lap-content-container");
 const displayTime = document.querySelector(".output");
 const lapContainer = document.querySelector(".lap-container");
 const lapHeadings = document.querySelectorAll(".heading");
+let day=document.getElementById("dy");
 let hr = document.getElementById("hr");
 let mint = document.getElementById("min");
 let sec = document.getElementById("sec");
@@ -30,7 +31,9 @@ start.addEventListener("click", () => {
     timeInterval = setInterval(() => {
         elapsedTime = Date.now() - startTime;
         const time = timeFormate(elapsedTime);
-        const { hours, minutes, seconds, milliseconds } = time;
+        console.log(time);
+        const { daycount, hours, minutes, seconds, milliseconds } = time;
+        day.innerHTML=digitHandler(daycount);
         hr.innerHTML = digitHandler(hours);
         mint.innerHTML = digitHandler(minutes);
         sec.innerHTML = digitHandler(seconds);
@@ -49,6 +52,7 @@ stop.addEventListener("click", () => {
 //handle stopwatch reset function
 reset.addEventListener("click", () => {
     clearInterval(timeInterval);
+    day.innerHTML="00";
     hr.innerHTML = "00";
     mint.innerHTML = "00";
     sec.innerHTML = "00";
@@ -107,11 +111,12 @@ const getLapTime = () => {
 //convert the miliseconds into hours, mintues , seconds and miliseconds
 const timeFormate = (elapsedTime) => {
     const date = new Date(elapsedTime);
+    let daycount=date.getDate()-1;
     let hours = date.getUTCHours();
     let minutes = date.getUTCMonth();
     let seconds = date.getUTCSeconds()
     let milliseconds = Math.floor(date.getMilliseconds() / 10);
-    return { hours, minutes, seconds, milliseconds };
+    return {daycount, hours, minutes, seconds, milliseconds };
 };
 //to handle two digit number
 const digitHandler = (time) => {
@@ -123,8 +128,8 @@ const digitHandler = (time) => {
 };
 //to display lap time formate
 const displayFormattedTime = (div, time) => {
-    const { hours, minutes, seconds, milliseconds } = time;
-    div.innerHTML = `${digitHandler(hours)}:${digitHandler(
+    const {daycount, hours, minutes, seconds, milliseconds } = time;
+    div.innerHTML = `${digitHandler(daycount    )}:${digitHandler(hours)}:${digitHandler(
         minutes
     )}:${digitHandler(seconds)}:${digitHandler(milliseconds)}`;
 };
